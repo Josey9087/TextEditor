@@ -26,7 +26,16 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   console.log('get request');
   const jateDB = await openDB('jate', 1);
-  const tx = jateDB.transaction('jate', "readonly")
+  const tx = jateDB.transaction('jate', 'readonly'),
+  const store = tx.objectStore('jate');
+  const request = store.get(1);
+  const result = await request;
+  if (result.value != undefined) {
+    return result.value;
+  } else {
+    console.log("Couldn't find values");
+    return;
+  }
 }
 
 
