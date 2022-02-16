@@ -27,6 +27,20 @@ module.exports = () => {
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest:'src-sw.js'
+      }),
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'JATE Logo',
+        short_name: 'JATE',
+        description: 'IT JATE',
+        background_color: '225ca3',
+        theme_color: '#225ca3',
+        start_url: '/',
+        publicPath: '/',
+        icons: [
+          
+        ]
       })
     ],
 
