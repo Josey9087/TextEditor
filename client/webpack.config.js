@@ -34,7 +34,7 @@ module.exports = () => {
         name: 'JATE Logo',
         short_name: 'JATE',
         description: 'IT JATE',
-        background_color: '225ca3',
+        background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: '/',
         publicPath: '/',
